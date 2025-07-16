@@ -2,8 +2,12 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import "./globals.css";
+import { IBM_Plex_Mono } from "next/font/google";
+const ibmPlexMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-ibm-plex-mono", // <-- use a unique, descriptive variable name
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,11 +26,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body>
+    <html lang="en" className={ibmPlexMono.variable}>
+      <body className="bg-neutral-900 text-white font-ibm">
         <Navbar />
-        {children}
-        <Footer />
+        <main className="pt-24">{children}</main>
       </body>
     </html>
   );

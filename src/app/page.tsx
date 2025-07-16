@@ -1,9 +1,8 @@
 import LandingSection from "@/components/LandingSection";
+import ExperienceSection from "@/components/ExperienceSection";
+import ProjectsSection from "@/components/ProjectsSection";
+import ContactSection from "@/components/ContactSection";
 
 export default function Home() {
-  return (
-    <main className="bg-neutral-900 min-h-screen">
-      <LandingSection />
-    </main>
-  );
+  return <LandingSection />;
 }
