@@ -58,7 +58,7 @@ const LandingSection = () => {
             </a>
           </div>
           <a
-            href="/Ali_Ismail-Resume.pdf"
+            href="/Ali_Ismail-sofwtare.pdf"
             download
             className="inline-flex items-center gap-2 px-6 py-3 border-2 border-green-400 text-green-400 rounded-lg font-semibold hover:bg-green-50/10 transition transform hover:-translate-y-1 font-ibm"
           >

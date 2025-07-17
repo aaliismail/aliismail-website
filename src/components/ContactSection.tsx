@@ -1,25 +1,68 @@
-const ContactSection = () => (
-    <section id="contact" className="py-24 px-4 max-w-5xl mx-auto text-center">
-      <h2 className="text-3xl font-bold text-white mb-6 font-mono">
-        <span className="text-green-400 mr-2">03.</span> Contact
+"use client";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { Typewriter } from "react-simple-typewriter";
+
+export default function ContactSection() {
+  return (
+    <section className="py-24 px-4 max-w-2xl mx-auto">
+      {/* Divider/Subtitle */}
+      <div className="text-center mb-2">
+        <span className="text-lg text-green-400 font-mono tracking-wide">
+          <Typewriter
+            words={["Get In Touch"]}
+            loop={false}
+            cursor
+            cursorStyle="|"
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={2000}
+          />
+        </span>
+      </div>
+      {/* Main Heading */}
+      <h2 className="text-5xl font-bold text-neutral-900 text-center mb-2 font-ibm dark:text-white">
+        Let&apos;s Connect
       </h2>
-      <p className="text-xl text-white mb-6">
-        I’m always open to learning about new things, and I love to build. Reach out to me if you’d like to chat!
+      {/* Description */}
+      <p className="text-center text-neutral-500 max-w-xl mx-auto mb-10">
+        I&apos;m always excited to collaborate on interesting projects or discuss new opportunities.
       </p>
-      <a href="mailto:aliismail@email.com" className="text-green-400 font-mono text-lg hover:underline">
-        aliismail@email.com
-      </a>
-      <div className="flex justify-center gap-4 mt-6">
-        <a href="https://github.com/YOUR_GITHUB" target="_blank" rel="noopener noreferrer" className="border border-green-400 p-2 rounded hover:bg-green-50/10">
-          {/* GitHub SVG icon */}
-          <svg width="24" height="24" fill="none" stroke="currentColor" className="text-green-400"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.66-.22.66-.48 0-.24-.01-.87-.01-1.7-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.1-1.46-1.1-1.46-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85.004 1.71.11 2.51.32 1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.85 0 1.33-.01 2.4-.01 2.73 0 .27.16.58.67.48A10.01 10.01 0 0022 12c0-5.52-4.48-10-10-10z"/></svg>
+      {/* Card */}
+      <div className="bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700 rounded-xl shadow p-8 mx-auto max-w-lg flex flex-col items-center">
+        <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-2">Wanna Talk?</h3>
+        <p className="text-neutral-600 dark:text-neutral-300 mb-6 text-center">
+          Whether you have a question about my work, want to discuss an idea, or just want to say hello, I&apos;ll get back to you promptly.
+        </p>
+        <a
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=ismailali12065@gmail.com"
+          className="inline-flex items-center gap-2 px-8 py-3 bg-green-600 text-white rounded-lg font-semibold text-lg shadow hover:bg-green-700 transition mb-4"
+        >
+          SEND ME AN EMAIL <FaEnvelope className="ml-2" />
         </a>
-        <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank" rel="noopener noreferrer" className="border border-green-400 p-2 rounded hover:bg-green-50/10">
-          {/* LinkedIn SVG icon */}
-          <svg width="24" height="24" fill="none" stroke="currentColor" className="text-green-400"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
-        </a>
+        <div className="text-neutral-500 mb-2">or find me on</div>
+        <div className="flex gap-4 mb-6">
+          <a
+            href="https://github.com/aaliismail"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border-2 border-green-600 text-green-600 rounded-lg p-2 text-2xl hover:bg-green-50/20 transition"
+          >
+            <FaGithub />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/ali-ismail-697275284/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border-2 border-green-600 text-green-600 rounded-lg p-2 text-2xl hover:bg-green-50/20 transition"
+          >
+            <FaLinkedin />
+          </a>
+        </div>
+        <hr className="w-full border-t border-neutral-200 dark:border-neutral-700 mb-2" />
+        <div className="text-xs text-neutral-400 text-center">
+          Based in <span className="text-green-400 font-semibold">HTX / NYC</span> and open to opportunities worldwide.
+        </div>
       </div>
     </section>
   );
-  
-  export default ContactSection;
+}
