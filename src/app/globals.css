@@ -22,3 +22,22 @@
 body {
   font-family: IBM Plex Mono, Arial, Helvetica, sans-serif;
 }
+
+.animated-underline {
+  position: relative;
+  overflow: hidden;
+}
+.animated-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: #22c55e; /* Tailwind green-400 */
+  transition: width 0.3s;
+}
+.animated-underline:hover::after,
+.animated-underline:focus::after {
+  width: 100%;
+}

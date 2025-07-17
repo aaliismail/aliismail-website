@@ -4,7 +4,14 @@ import Image from "next/image";
 
 const Navbar = () => {
   return (
-    <nav className="w-full flex items-center justify-between px-8 py-4 border-b border-green-400 bg-neutral-900 fixed top-0 left-0 z-50">
+    <nav className="
+  fixed top-0 left-0 w-full z-50
+  bg-white/30 dark:bg-neutral-900/30
+  backdrop-blur-md backdrop-saturate-150
+  border-b border-green-400
+  flex items-center justify-between px-8 py-4
+  transition-colors
+">
       {/* Logo/Initials */}
       <div className="flex items-center">
         <Link
@@ -17,13 +24,22 @@ const Navbar = () => {
       </div>
       {/* Section Links */}
       <div className="flex space-x-8">
-        <a href="/experience" className="text-white font-mono tracking-widest hover:underline underline-offset-8 decoration-green-400 transition">
+        <a
+          href="/experience"
+          className="animated-underline text-white font-mono tracking-widest transition"
+        >
           <span className="text-green-400 mr-1">01.</span> EXPERIENCE
         </a>
-        <a href="/projects" className="text-white font-mono tracking-widest hover:underline underline-offset-8 decoration-green-400 transition">
+        <a
+          href="/projects"
+          className="animated-underline text-white font-mono tracking-widest transition"
+        >
           <span className="text-green-400 mr-1">02.</span> PROJECTS
         </a>
-        <a href="/contact" className="text-white font-mono tracking-widest hover:underline underline-offset-8 decoration-green-400 transition">
+        <a
+          href="/contact"
+          className="animated-underline text-white font-mono tracking-widest transition"
+        >
           <span className="text-green-400 mr-1">03.</span> CONTACT
         </a>
       </div>
